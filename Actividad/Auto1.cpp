@@ -1,9 +1,10 @@
 #include "Auto1.h"
 #include <cstdlib>
 #include <conio2.h>
-
+#include "Auto.h"
 #include <iostream>
 #include <cstdio>
+#include <ctime>
 using namespace std;
 
 /*
@@ -58,41 +59,11 @@ Auto1::Auto1(int vel, int x0, int y0){
 	
 }
 
-/*
-METODO DIBUJAR
-*/
-
-void Auto1::dibujar(){
-	
-	for (int i= 0; i<ancho; i++){
-		for (int k= 0; k<alto; k++){
-			textcolor(color[i][k]);
-			gotoxy(x+i,y+k);
-			cout<<(char) matriz[i][k];
-		}
-	}
-}
-
-/*
-METODO BORRAR
-*/
-
-void Auto1::borrar(){
-	
-	for (int i= 0; i<ancho+1; i++){
-		for (int k= 0; k<alto+1; k++){
-			textcolor(color[i][k]);	
-			gotoxy(x+i,y+k);
-			cout<<" ";
-		}
-	}
-}
-
 
 /// El metodo update lo tiene cada objeto pero es 
 //// distinto en cada caso, por lo que se debe implementar 
 /// en cada clase
-bool Auto1::update(){
+void Auto1::update(){
 	
 	if (_kbhit()){
 		int tecla = getch();
@@ -120,12 +91,6 @@ bool Auto1::update(){
 	
 }
 
-void Auto1::setLimit(int x0, int x1,int y0, int y1){
-	maxLimitX = x1;
-	maxLimitY = y1;
-	minLimitX = x0;
-	minLimitY = y0;
-	
-}
+
 	
 

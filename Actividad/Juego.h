@@ -3,6 +3,7 @@
 #include "Auto1.h"
 #include "Auto2.h"
 #include "Auto3.h"
+#include "Auto.h"
 
 
 class Juego{
@@ -15,6 +16,7 @@ class Juego{
 
 	
 public:
+	
 	Juego();
 	void play();
 	

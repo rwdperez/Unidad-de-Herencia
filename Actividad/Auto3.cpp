@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <conio2.h>
 #include <iostream>
+#include <ctime>
+#include "Auto.h"
 using namespace std;
 
 
@@ -57,40 +59,12 @@ Auto3::Auto3(int vel, int x0, int y0){
 	
 }
 
-/*
-METODO DIBUJAR
-*/
-
-void Auto3::dibujar(){
-	
-	for (int i= 0; i<ancho; i++){
-		for (int k= 0; k<alto; k++){
-			textcolor(color[i][k]);
-			gotoxy(x+i,y+k);
-			cout<<(char) matriz[i][k];
-		}
-	}
-}
-
-/*
-METODO BORRAR
-*/
-
-void Auto3::borrar(){
-	
-	for (int i= 0; i<ancho+1; i++){
-		for (int k= 0; k<alto+1; k++){
-			textcolor(color[i][k]);	
-			gotoxy(x+i,y+k);
-			cout<<" ";
-		}
-	}
-}
 
 
 /// El metodo update lo tiene cada objeto pero es 
 //// distinto en cada caso, por lo que se debe implementar 
 /// en cada clase
+
 void Auto3::Colorear(){
 
 	colorAuto = (rand()%15)+1;
@@ -112,13 +86,7 @@ void Auto3::update(){
 	}
 }
 
-void Auto3::setLimit(int x0, int x1,int y0, int y1){
-	maxLimitX = x1;
-	maxLimitY = y1;
-	minLimitX = x0;
-	minLimitY = y0;
-	
-}
+
 
 
 

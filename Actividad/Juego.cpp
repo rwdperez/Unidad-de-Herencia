@@ -3,6 +3,7 @@
 #include <conio2.h>
 #include <climits>
 #include "Auto3.h"
+#include "Auto.h"
 using namespace std;
 
 Juego::Juego(){
