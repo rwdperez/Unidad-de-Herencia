@@ -13,18 +13,11 @@ public:
 	
 	int petalos;
 	
-	void regar();
+
 	
 };
 
 flor::flor(){}
-
-void regar(){
-	
-	cout<<"Regando la flor"<<endl;
-}
-
-
 
 
 class margarita: public flor {
@@ -47,8 +40,6 @@ int main(int argc, char *argv[]) {
 	
 	margarita miMargarita;
 	cout<<miMargarita.petalos;
-	miMargarita.regar();
-	
 	
 	return 0;
 }
